@@ -7,6 +7,5 @@
     "train_images_folder": "dataset/images",
     "train_labels_csv": "dataset/trainingset.csv",
     "test_labels_csv": "dataset/validationset.csv",
-    "model_save_path": "results/trained_models/resnet50v2.h5",
     "test_results": "results/test_images"
 }

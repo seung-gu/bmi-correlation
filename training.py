@@ -1,5 +1,5 @@
+import argparse
 import json
-import os
 
 import tensorflow as tf
 from load_dataset import load_data
@@ -15,17 +15,23 @@ if gpus:
     except RuntimeError as e:
         print(e)
 
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description='Train a model.')
+parser.add_argument('--model', type=str, required=True, help='Model name (RESNET50V2 or VGG16)')
+parser.add_argument('--save_path', type=str, required=True, help='Path to save the trained model')
+args = parser.parse_args()
+
 # Load configuration of training
-if os.getenv('MODEL') == 'RESNET50V2':
+if args.model == 'RESNET50V2':
     with open('models/resnet50v2.json', 'r') as config_file:
         config = json.load(config_file)
     model = ResNet50V2Model(input_shape=(224, 224, 3), dropout=config['dropout'], dense=config['dense'])
-elif os.getenv('MODEL') == 'VGG16':
+elif args.model == 'VGG16':
     with open('models/vgg16.json', 'r') as config_file:
         config = json.load(config_file)
     model = VGG16Model(input_shape=(224, 224, 3), dropout=config['dropout'], dense=config['dense'])
 else:
-    raise ValueError('Invalid model name! Check .env file and set MODEL properly')
+    raise ValueError('Invalid model name!')
 
 
 # Load the data
@@ -39,4 +45,4 @@ model.train(x_train, y_train, x_val, y_val, batch_size=config['batch_size'], epo
 model.evaluate(x_test, y_test)
 
 # Save the trained model
-model.save(config['model_save_path'])
+model.save(args.save_path)
