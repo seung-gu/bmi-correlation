@@ -43,7 +43,12 @@ It was trained in many different models and parameters to find the best model an
 
 Tested models: **VGG16**, **VGG19**, **ResNet50**, **ResNet50v2**, **InceptionV3**
 
-## Fine-tuned models
+## Dataset download
+
+### Dataset
+https://drive.google.com/file/d/1KbkAfwbGdxskWQoxyy4bK-fwtDgFrL4G/view?usp=drive_link
+
+### Fine-tuned models
 [ResNet50v2]
 
 https://drive.google.com/file/d/153Zi2oIjApnbj3EDe1ME_ZDSR1YV3uft/view?usp=sharing
