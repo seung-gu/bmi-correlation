@@ -35,7 +35,7 @@ TEST_LABELS_CSV=${your_test_labels_csv}
 
 There are two different model versions (`${model_name}`: _resnet50v2_, _vgg16_).
 
-You can set configuration of each models under the same directory of models (`models/resnet50v2.json`, `models/vgg16.json`)
+You can set configuration of each models under the same directory of models (`models/${model_name}.json`)
 
 ## Training
 
