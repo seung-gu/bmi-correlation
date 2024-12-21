@@ -37,7 +37,7 @@ VGG16 outperforms ResNet50v2 in terms of MAE, but ResNet50v2 is less complex and
 
 
 ## Reference
-research.ipynb (Colab file)
+_**research.ipynb**_ (Colab file)
 
 It was trained in many different models and parameters to find the best model and parameters.
 
