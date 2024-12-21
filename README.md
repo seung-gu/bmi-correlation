@@ -13,15 +13,6 @@ unzip the file and set the path in the .env file
 
 https://drive.google.com/file/d/1J7clr871lP6IYg02hkk6JJ36KReGtYnC/view?usp=drive_link
 
-### Fine-tuned models
-
-[ResNet50v2]
-
-https://drive.google.com/file/d/153Zi2oIjApnbj3EDe1ME_ZDSR1YV3uft/view?usp=sharing
-
-[VGG16]
-
-https://drive.google.com/file/d/1-1dgSZ_j_x_DO86KqnWan54OVD1Uw_gr/view?usp=drive_link
 
 #### Setup .env file
 ```
@@ -68,4 +59,13 @@ It was trained in many different models and parameters to find the best model an
 
 Trained and tested models: **VGG16**, **VGG19**, **ResNet50**, **ResNet50v2**, **InceptionV3**
 
+## Fine-tuned models
+
+[ResNet50v2]
+
+https://drive.google.com/file/d/153Zi2oIjApnbj3EDe1ME_ZDSR1YV3uft/view?usp=sharing
+
+[VGG16]
+
+https://drive.google.com/file/d/1-1dgSZ_j_x_DO86KqnWan54OVD1Uw_gr/view?usp=drive_link
 
