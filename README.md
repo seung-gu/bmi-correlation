@@ -48,7 +48,7 @@ _**research.ipynb**_ (Colab file)
 
 It was trained in many different models and parameters to find the best model and parameters.
 
-Tested models: **VGG16**, **VGG19**, **ResNet50**, **ResNet50v2**, **InceptionV3**
+Trained and tested models: **VGG16**, **VGG19**, **ResNet50**, **ResNet50v2**, **InceptionV3**
 
 ## Dataset download
 
