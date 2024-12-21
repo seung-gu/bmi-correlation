@@ -6,18 +6,36 @@
 
 `pip install -r requirements.txt`
 
-##### Setup .env file
+## Dataset download
+
+### Dataset
+unzip the file and set the path in the .env file
+
+https://drive.google.com/file/d/1J7clr871lP6IYg02hkk6JJ36KReGtYnC/view?usp=drive_link
+
+### Fine-tuned models
+
+[ResNet50v2]
+
+https://drive.google.com/file/d/153Zi2oIjApnbj3EDe1ME_ZDSR1YV3uft/view?usp=sharing
+
+[VGG16]
+
+https://drive.google.com/file/d/1-1dgSZ_j_x_DO86KqnWan54OVD1Uw_gr/view?usp=drive_link
+
+#### Setup .env file
 ```
 TRAIN_IMAGES_FOLDER=${your_train_images_folder}
 TRAIN_LABELS_CSV=${your_train_labels_csv}
 TEST_LABELS_CSV=${your_test_labels_csv}
 ```
 
-## Dataset load
+
+## Training model parameters
 
 There are two different model versions (_resnet50v2_, _vgg16_).
 
-You can set dataset path (images, training_label, test_label) under **dataset** folder and training parameters under **models/${model_name}.json** file ({model_name}: resnet50v2, vgg16)
+You can set configuration of each models under the same directory of models (models/resnet50v2.json, models/vgg16.json)
 
 ## Training
 
@@ -50,18 +68,4 @@ It was trained in many different models and parameters to find the best model an
 
 Trained and tested models: **VGG16**, **VGG19**, **ResNet50**, **ResNet50v2**, **InceptionV3**
 
-## Dataset download
 
-### Dataset
-unzip the file and set the path in the .env file
-https://drive.google.com/file/d/1J7clr871lP6IYg02hkk6JJ36KReGtYnC/view?usp=drive_link
-
-### Fine-tuned models
-
-[ResNet50v2]
-
-https://drive.google.com/file/d/153Zi2oIjApnbj3EDe1ME_ZDSR1YV3uft/view?usp=sharing
-
-[VGG16]
-
-https://drive.google.com/file/d/1-1dgSZ_j_x_DO86KqnWan54OVD1Uw_gr/view?usp=drive_link
