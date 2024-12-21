@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 
 import tensorflow as tf
 from load_dataset import load_data
@@ -35,9 +36,9 @@ else:
 
 
 # Load the data
-x_train, y_train, x_val, y_val, x_test, y_test = load_data(image_folder=config['train_images_folder'],
-                                                           dataset_csv=config['train_labels_csv'],
-                                                           testset_csv=config['test_labels_csv'])
+x_train, y_train, x_val, y_val, x_test, y_test = load_data(image_folder=os.getenv('TRAIN_IMAGES_FOLDER'),
+                                                           dataset_csv=os.getenv('TRAIN_LABELS_CSV'),
+                                                           testset_csv=os.getenv('TEST_LABELS_CSV'))
 # Train the model
 model.train(x_train, y_train, x_val, y_val, batch_size=config['batch_size'], epochs=config['epochs'])
 
