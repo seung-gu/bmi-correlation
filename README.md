@@ -53,9 +53,11 @@ Tested models: **VGG16**, **VGG19**, **ResNet50**, **ResNet50v2**, **InceptionV3
 ## Dataset download
 
 ### Dataset
-https://drive.google.com/file/d/1KbkAfwbGdxskWQoxyy4bK-fwtDgFrL4G/view?usp=drive_link
+unzip the file and set the path in the .env file
+https://drive.google.com/file/d/1J7clr871lP6IYg02hkk6JJ36KReGtYnC/view?usp=drive_link
 
 ### Fine-tuned models
+
 [ResNet50v2]
 
 https://drive.google.com/file/d/153Zi2oIjApnbj3EDe1ME_ZDSR1YV3uft/view?usp=sharing
