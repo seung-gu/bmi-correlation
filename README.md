@@ -29,15 +29,15 @@ run
 
 **MAE** of the total test images 
 
-VGG16 : 5.09
+VGG16 : **5.09**
 
-ResNet50v2 : 5.80
+ResNet50v2 : **5.80**
 
 VGG16 outperforms ResNet50v2 in terms of MAE, but ResNet50v2 is less complex and faster than VGG16.
 
 
 ## Reference
-research.ipynb (Colab file)
+_**research.ipynb**_ (Colab file)
 
 It was trained in many different models and parameters to find the best model and parameters.
 
