@@ -3,5 +3,5 @@
     "dropout": 0.25,
     "dense": 128,
     "epochs": 10,
-    "batch_size": 32,
+    "batch_size": 32
 }
