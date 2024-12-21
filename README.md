@@ -6,6 +6,13 @@
 
 `pip install -r requirements.txt`
 
+##### Setup .env file
+```
+TRAIN_IMAGES_FOLDER=${your_train_images_folder}
+TRAIN_LABELS_CSV=${your_train_labels_csv}
+TEST_LABELS_CSV=${your_test_labels_csv}
+```
+
 ## Dataset load
 
 There are two different model versions (_resnet50v2_, _vgg16_).
