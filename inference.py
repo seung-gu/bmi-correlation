@@ -1,31 +1,29 @@
+import argparse
 import random
 import matplotlib.pyplot as plt # Import matplotlib.pyplot
 import matplotlib
 import numpy as np
 import os
-import json
 from tensorflow.keras.models import load_model  # Import load_model from tensorflow.keras.models
 from load_dataset import load_test_data  # Import x_test, y_test, and test_filenames from load_dataset.py
 from sklearn.metrics import mean_absolute_error
+from dotenv import load_dotenv
 
+load_dotenv()
 matplotlib.use('Agg')
 
+# Parse command-line arguments
+parser = argparse.ArgumentParser(description='Infer a model.')
+parser.add_argument('--model_path', type=str, required=True, help='Model path to load')
+parser.add_argument('--test_results', type=str, required=True, help='Path to save the test results')
+args = parser.parse_args()
 
-# Load configuration
-if os.getenv('MODEL') == 'RESNET50V2':
-    with open('models/resnet50v2.json', 'r') as config_file:
-        config = json.load(config_file)
-elif os.getenv('MODEL') == 'VGG16':
-    with open('models/vgg16.json', 'r') as config_file:
-        config = json.load(config_file)
-else:
-    raise ValueError('Invalid model name! Check .env file and set MODEL properly')
 
-test_images, test_texts, test_filenames = load_test_data(image_folder=config['train_images_folder'],
-                                                         testset_csv=config['test_labels_csv'])
+test_images, test_texts, test_filenames = load_test_data(image_folder=os.getenv('TRAIN_IMAGES_FOLDER'),
+                                                         testset_csv=os.getenv('TEST_LABELS_CSV'))
 
-model = load_model(config['model_save_path'])  # Load the model
-result_folder = config['test_results']
+model = load_model(args.model_path)  # Load the model
+result_folder = args.test_results
 
 # Make predictions on test data
 predictions = model.predict(test_images)

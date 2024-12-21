@@ -2,10 +2,6 @@
     "model": "ResNet50V2",
     "dropout": 0.25,
     "dense": 128,
-    "epochs": 1,
+    "epochs": 10,
     "batch_size": 32,
-    "train_images_folder": "dataset/images",
-    "train_labels_csv": "dataset/trainingset.csv",
-    "test_labels_csv": "dataset/validationset.csv",
-    "test_results": "results/test_images"
 }

@@ -17,16 +17,16 @@ if gpus:
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description='Train a model.')
-parser.add_argument('--model', type=str, required=True, help='Model name (RESNET50V2 or VGG16)')
+parser.add_argument('--model', type=str, required=True, help='Model name (resnet50v2 or vgg16)')
 parser.add_argument('--save_path', type=str, required=True, help='Path to save the trained model')
 args = parser.parse_args()
 
 # Load configuration of training
-if args.model == 'RESNET50V2':
+if args.model == 'resnet50v2':
     with open('models/resnet50v2.json', 'r') as config_file:
         config = json.load(config_file)
     model = ResNet50V2Model(input_shape=(224, 224, 3), dropout=config['dropout'], dense=config['dense'])
-elif args.model == 'VGG16':
+elif args.model == 'vgg16':
     with open('models/vgg16.json', 'r') as config_file:
         config = json.load(config_file)
     model = VGG16Model(input_shape=(224, 224, 3), dropout=config['dropout'], dense=config['dense'])
